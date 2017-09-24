@@ -179,12 +179,12 @@ try:
 
     @bot.message_handler(content_types=['text'])
     def set_message(message):
+        global check_message
         if (check_message) and (message.chat.id in admin):
             global admin_mesage
             admin_mesage += message.text
             markup = data.buttons.button_admin_message()
             bot.send_message(message.chat.id, 'Пост добавлен', reply_markup=markup)
-            global check_message
             check_message = False
         else:
             bot.send_message(message.chat.id, 'Я тебя не понимаю')
