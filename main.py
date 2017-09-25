@@ -198,6 +198,6 @@ try:
                 return user
 
     if __name__ == '__main__':
-        bot.polling(none_stop=False, interval=0, timeout=20)
+        bot.polling(none_stop=False, interval=60, timeout=60)
 except:
     bot.send_message(admin[1], "Я упал, помоги мне")
