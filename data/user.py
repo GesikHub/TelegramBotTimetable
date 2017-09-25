@@ -12,7 +12,7 @@ class User():
         self.name = name
         self.surname = surname
         self.number = number
-    def     toString(self):
+    def toString(self):
         user = "Id: " + str(self.id) + "\n" \
                "Name: " + str(self.name) + "\n" \
                "Surname: " + str(self.surname) +"\n" \
