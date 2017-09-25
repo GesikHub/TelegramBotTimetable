@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca0306c0-2ccb-4ca7-bde3-ab9232ade801" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Procfile.windows.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/KН36ГFriday.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/KН36ГMonday.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/KН36ГThursday.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/KН36ГTuesday.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/KН36ГWednesday.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/KН36ДMonday.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/KН36ДThursday.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/KН36ДTuesday.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/KН36ДWednesday.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/KН36ЕFriday.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/KН36ЕMonday.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/KН36ЕThuesday.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/KН36ЕThursday.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/KН36ЕWednesday.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/KН36дFriday.txt" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Bot.db" afterPath="$PROJECT_DIR$/Bot.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/user.py" afterPath="$PROJECT_DIR$/data/user.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myString.py" afterPath="$PROJECT_DIR$/myString.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,8 +21,8 @@
       <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="2" column="54" lean-forward="false" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
+            <state relative-caret-position="132">
+              <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -50,8 +31,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="154" column="21" lean-forward="true" selection-start-line="154" selection-start-column="21" selection-end-line="154" selection-end-column="21" />
+            <state relative-caret-position="433">
+              <caret line="215" column="0" lean-forward="false" selection-start-line="215" selection-start-column="0" selection-end-line="216" selection-end-column="0" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -62,8 +43,8 @@
       <file leaf-file-name="myString.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/myString.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="884">
-              <caret line="57" column="14" lean-forward="true" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
+            <state relative-caret-position="1254">
+              <caret line="57" column="14" lean-forward="false" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -72,7 +53,7 @@
       <file leaf-file-name="user.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data/user.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
+            <state relative-caret-position="44">
               <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -112,6 +93,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="PUSH_TAGS">
+      <GitPushTagMode />
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -444,7 +428,21 @@
       <option name="project" value="LOCAL" />
       <updated>1506290176839</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="server">
+      <created>1506320911312</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1506320911312</updated>
+    </task>
+    <task id="LOCAL-00011" summary="server">
+      <created>1506321148678</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1506321148678</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -498,7 +496,8 @@
     <MESSAGE value="Add SQL" />
     <MESSAGE value="Bot v0.1" />
     <MESSAGE value="vend" />
-    <option name="LAST_COMMIT_MESSAGE" value="vend" />
+    <MESSAGE value="server" />
+    <option name="LAST_COMMIT_MESSAGE" value="server" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -647,23 +646,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/myString.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="57" column="14" lean-forward="true" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="54" lean-forward="false" selection-start-line="2" selection-start-column="54" selection-end-line="2" selection-end-column="54" />
+        <state relative-caret-position="1254">
+          <caret line="57" column="14" lean-forward="false" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/user.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
+        <state relative-caret-position="44">
           <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
@@ -671,10 +662,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="30" lean-forward="true" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="154" column="21" lean-forward="true" selection-start-line="154" selection-start-column="21" selection-end-line="154" selection-end-column="21" />
+        <state relative-caret-position="433">
+          <caret line="215" column="0" lean-forward="false" selection-start-line="215" selection-start-column="0" selection-end-line="216" selection-end-column="0" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>

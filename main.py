@@ -3,6 +3,8 @@ import data.buttons
 import logging
 import myString
 import data.read
+import os
+from flask import Flask, request
 from telebot import types
 from config import TOKEN
 from config import database_name
@@ -11,10 +13,10 @@ from data.user import User
 from data.SQLighter import SQLStudents
 
 bot = telebot.TeleBot(TOKEN);
+server = Flask(__name__)
 check_message = False
 admin_mesage = ''
 students = []
-
 
 try:
     @bot.message_handler(commands=['start'])
@@ -196,6 +198,22 @@ try:
                 user = User()
                 user.student(student.id, student.name, student.surname, student.number)
                 return user
+
+
+    @server.route("/439253618:AAEC3C29rePF6ZdREKJfOv32zw3T_TjJPhg", methods=['POST'])
+    def getMessage():
+        bot.process_new_updates([telebot.types.Update.de_json(request.stream.read().decode("utf-8"))])
+        return "!", 200
+
+
+    @server.route("/")
+    def webhook():
+        bot.remove_webhook()
+        bot.set_webhook(url="https://dashboard.heroku.com/apps/bottimetabl/439253618:AAEC3C29rePF6ZdREKJfOv32zw3T_TjJPhg")
+        return "!", 200
+
+
+    server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))
 
     if __name__ == '__main__':
         bot.polling(none_stop=True)
