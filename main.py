@@ -17,8 +17,6 @@ server = Flask(__name__)
 check_message = False
 admin_mesage = ''
 students = []
-SECRET = '/bot' + TOKEN
-URL = " "
 
 try:
     @bot.message_handler(commands=['start'])
@@ -218,8 +216,6 @@ try:
     server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))
 
     if __name__ == '__main__':
-        bot.setWebhook()
-        bot.setWebhook(URL + SECRET)
         bot.polling(none_stop=True)
 except:
     bot.send_message(admin[1], "Я упал, помоги мне")
