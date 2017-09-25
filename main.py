@@ -14,6 +14,8 @@ bot = telebot.TeleBot(TOKEN);
 check_message = False
 admin_mesage = ''
 students = []
+SECRET = '/bot' + TOKEN
+URL = " "
 
 
 try:
@@ -198,6 +200,8 @@ try:
                 return user
 
     if __name__ == '__main__':
+        bot.setWebhook()
+        bot.setWebhook(URL + SECRET)
         bot.polling(none_stop=True)
 except:
     bot.send_message(admin[1], "Я упал, помоги мне")
