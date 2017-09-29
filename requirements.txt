@@ -1,5 +1,12 @@
 bottle==0.12.13
+click==6.7
+Flask==0.12.2
+itsdangerous==0.24
+Jinja2==2.9.6
+MarkupSafe==1.0
+numpy==1.13.1+mkl
 pyTelegramBotAPI==2.3.0
 requests==2.13.0
 six==1.10.0
 virtualenv==15.1.0
+Werkzeug==0.12.2
