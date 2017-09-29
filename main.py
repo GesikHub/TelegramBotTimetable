@@ -209,13 +209,10 @@ try:
     @server.route("/")
     def webhook():
         bot.remove_webhook()
-        bot.set_webhook(url="https://dashboard.heroku.com/apps/bottimetabl/439253618:AAEC3C29rePF6ZdREKJfOv32zw3T_TjJPhg")
+        bot.set_webhook(url="https://bottimetable.herokuapp.com/439253618:AAEC3C29rePF6ZdREKJfOv32zw3T_TjJPhg")
         return "!", 200
-
 
     server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))
 
-    if __name__ == '__main__':
-        bot.polling(none_stop=True)
 except:
     bot.send_message(admin[1], "Я упал, помоги мне")
