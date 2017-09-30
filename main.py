@@ -29,10 +29,10 @@ conn = psycopg2.connect(database=db_info.get('NAME'),
 
 cursor = conn.cursor()
 newtable = "CREATE TABLE students (" \
-           "id INTEGER, " \
-           "first_name TEXT, " \
-           "second_name TEXT, " \
-           "gruop_number TEXT, " \
+           "id INTEGER," \
+           "first_name TEXT," \
+           "second_name TEXT," \
+           "gruop_number TEXT," \
            "PRIMARY KEY (id)" \
            ");"
 cursor.execute(newtable)
