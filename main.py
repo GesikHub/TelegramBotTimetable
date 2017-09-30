@@ -1,14 +1,11 @@
 import telebot
 import data.buttons
-import logging
 import myString
-import data.read
 import os
 from flask import Flask, request
-from telebot import types
 from config import TOKEN
 from config import database_name
-from  config import  admin
+from config import admin
 from data.user import User
 from data.SQLighter import SQLStudents
 
@@ -20,20 +17,19 @@ students = []
 
 try:
     @bot.message_handler(commands=['start'])
+    @bot.message_handler(commands=['start'])
     def start_message(message):
-        bot.send_message(message.chat.id, myString.start)
-        if check_stud(message.chat.id) == False:
+        db_worker = SQLStudents(database_name)
+        if db_worker.chek_database(message.chat.id) == False:
             add_student(message.chat.id)
+        db_worker.close()
 
     @bot.message_handler(commands=['help'])
     def start_message(message):
-        if check_stud(message.chat.id) == False:
-            add_student(message.chat.id)
+        if message.chat.id in admin:
+            bot.send_message(message.chat.id, myString.help_for_admin)
         else:
-            if message.chat.id in admin:
-                bot.send_message(message.chat.id, myString.help_for_admin)
-            else:
-                bot.send_message(message.chat.id, myString.help_for_users)
+            bot.send_message(message.chat.id, myString.help_for_users)
 
 
     @bot.message_handler(regexp="KН36Г")
@@ -48,23 +44,26 @@ try:
         user = User()
         user.message(msg)
         user.getNumberGroup(message.text)
-        students.append(user)
-        print(True)
+        db_worker = SQLStudents(database_name)
+        db_worker.insert_students(user)
+        db_worker.close()
 
     @bot.message_handler(regexp="Понедельник")
     @bot.message_handler(commands=['monday'])
     def send_timetable_monday(message):
-        if check_stud(message.chat.id) == False:
+        db_worker = SQLStudents(database_name)
+        if db_worker.chek_database(message.chat.id) == False:
             add_student(message.chat.id)
         else:
-            student = select_id(message.chat.id)
+            student = db_worker.select_id(message.chat.id)
             bot.send_message(message.chat.id, 'Понедельник\n')
-            if student.number == 'KН36Г':
+            if str(student.number) == 'KН36Г':
                 bot.send_message(message.chat.id, myString.monday_kn36g)
-            if student.number == 'KН36Д':
+            if str(student.number) == 'KН36Д':
                 bot.send_message(message.chat.id, myString.monday_kn36d)
-            if student.number == 'KН36Е':
+            if str(student.number) == 'KН36Е':
                 bot.send_message(message.chat.id, myString.monday_kn36e)
+        db_worker.close()
 
     @bot.message_handler(regexp="Вторник")
     @bot.message_handler(commands=['tuesday'])

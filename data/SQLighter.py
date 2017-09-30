@@ -1,15 +1,26 @@
-import sqlite3
+import psycopg2
 from data.user import User
 
 class SQLStudents():
     def __init__(self, database):
-        self.conection = sqlite3.connect(database)
+        self.conection = psycopg2.connect(database)
         self.cursor = self.conection.cursor()
+        self.create_newtable()
 
     def insert_students(self, student):
         insert = 'INSERT INTO students (id, first_name, second_name, gruop_number) VALUES (?, ?, ?, ?)'
         self.cursor.execute(insert, (int(student.id), student.name, student.surname, student.number))
         self.conection.commit()
+
+    def create_newtable(self):
+        newtable = "CREATE TABLE students (" \
+                   "id INTEGER," \
+                   "first_name VARCHAR," \
+                   "second_name VARCHAR," \
+                   "gruop_number VARCHAR," \
+                   "PRIMARY KEY (id)" \
+                   ")"
+        self.cursor.execute(newtable)
 
     def select_all(self):
         self.cursor.execute('SELECT * FROM students')
