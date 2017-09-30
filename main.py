@@ -17,26 +17,6 @@ check_message = False
 admin_mesage = ''
 students = []
 
-DATABASELINK = "postgres://icuuqvetjcyawb:e2563bd5ad0b32be65b13a1c7556571cfd322eff1ee571e73dc06a904252ae77@ec2-54-228-182-57.eu-west-1.compute.amazonaws.com:5432/d9mad9tbhdd8i9"
-
-db_info = dj_database_url.config(default=DATABASELINK)
-
-conn = psycopg2.connect(database=db_info.get('NAME'),
-		    		user=db_info.get('USER'),
-		    		password=db_info.get('PASSWORD'),
-		    		host=db_info.get('HOST'),
-		    		port=db_info.get('PORT'))
-
-cursor = conn.cursor()
-newtable = "CREATE TABLE students (" \
-           "id INTEGER," \
-           "first_name TEXT," \
-           "second_name TEXT," \
-           "gruop_number TEXT," \
-           "PRIMARY KEY (id)" \
-           ");"
-cursor.execute(newtable)
-
 try:
     @bot.message_handler(commands=['start'])
     def start_message(message):
