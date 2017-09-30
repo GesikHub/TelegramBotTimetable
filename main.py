@@ -17,19 +17,20 @@ students = []
 
 try:
     @bot.message_handler(commands=['start'])
-    @bot.message_handler(commands=['start'])
     def start_message(message):
-        db_worker = SQLStudents(database_name)
-        if db_worker.chek_database(message.chat.id) == False:
+        bot.send_message(message.chat.id, myString.start)
+        if check_stud(message.chat.id) == False:
             add_student(message.chat.id)
-        db_worker.close()
 
     @bot.message_handler(commands=['help'])
     def start_message(message):
-        if message.chat.id in admin:
-            bot.send_message(message.chat.id, myString.help_for_admin)
+        if check_stud(message.chat.id) == False:
+            add_student(message.chat.id)
         else:
-            bot.send_message(message.chat.id, myString.help_for_users)
+            if message.chat.id in admin:
+                bot.send_message(message.chat.id, myString.help_for_admin)
+            else:
+                bot.send_message(message.chat.id, myString.help_for_users)
 
 
     @bot.message_handler(regexp="KН36Г")
@@ -44,26 +45,23 @@ try:
         user = User()
         user.message(msg)
         user.getNumberGroup(message.text)
-        db_worker = SQLStudents(database_name)
-        db_worker.insert_students(user)
-        db_worker.close()
+        students.append(user)
+        print(True)
 
     @bot.message_handler(regexp="Понедельник")
     @bot.message_handler(commands=['monday'])
     def send_timetable_monday(message):
-        db_worker = SQLStudents(database_name)
-        if db_worker.chek_database(message.chat.id) == False:
+        if check_stud(message.chat.id) == False:
             add_student(message.chat.id)
         else:
-            student = db_worker.select_id(message.chat.id)
+            student = select_id(message.chat.id)
             bot.send_message(message.chat.id, 'Понедельник\n')
-            if str(student.number) == 'KН36Г':
+            if student.number == 'KН36Г':
                 bot.send_message(message.chat.id, myString.monday_kn36g)
-            if str(student.number) == 'KН36Д':
+            if student.number == 'KН36Д':
                 bot.send_message(message.chat.id, myString.monday_kn36d)
-            if str(student.number) == 'KН36Е':
+            if student.number == 'KН36Е':
                 bot.send_message(message.chat.id, myString.monday_kn36e)
-        db_worker.close()
 
     @bot.message_handler(regexp="Вторник")
     @bot.message_handler(commands=['tuesday'])
