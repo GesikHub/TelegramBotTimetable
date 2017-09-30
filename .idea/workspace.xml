@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ca0306c0-2ccb-4ca7-bde3-ab9232ade801" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/read.py" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.py" afterPath="$PROJECT_DIR$/config.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/SQLighter.py" afterPath="$PROJECT_DIR$/data/SQLighter.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.py" afterPath="$PROJECT_DIR$/main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/requirements.txt" afterPath="$PROJECT_DIR$/requirements.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -470,7 +467,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506720408668</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="server1.2">
+      <created>1506770599482</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1506770599482</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -527,7 +531,8 @@
     <MESSAGE value="server" />
     <MESSAGE value="server1.0" />
     <MESSAGE value="server1.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="server1.1" />
+    <MESSAGE value="server1.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="server1.2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
