@@ -34,7 +34,7 @@ newtable = "CREATE TABLE students (" \
            "second_name TEXT, " \
            "gruop_number TEXT, " \
            "PRIMARY KEY (id)" \
-           ")"
+           ");"
 cursor.execute(newtable)
 
 try:
