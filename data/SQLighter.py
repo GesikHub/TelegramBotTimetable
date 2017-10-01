@@ -1,9 +1,15 @@
+import dj_database_url
 import psycopg2
 from data.user import User
 
 class SQLStudents():
     def __init__(self, database):
-        self.conection = psycopg2.connect(database)
+        db_info = dj_database_url.config(default=database)
+        self.conection = psycopg2.connect(database=db_info.get('NAME'),
+		    		user=db_info.get('USER'),
+		    		password=db_info.get('PASSWORD'),
+		    		host=db_info.get('HOST'),
+		    		port=db_info.get('PORT'))
         self.cursor = self.conection.cursor()
         self.create_newtable()
 
