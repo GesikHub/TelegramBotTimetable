@@ -20,10 +20,10 @@ class SQLStudents():
 
     def create_newtable(self):
         newtable = "CREATE TABLE students (" \
-                   "id INTEGER," \
-                   "first_name VARCHAR," \
-                   "second_name VARCHAR," \
-                   "gruop_number VARCHAR," \
+                   "id INTEGER, " \
+                   "first_name VARCHAR, " \
+                   "second_name VARCHAR, " \
+                   "gruop_number VARCHAR, " \
                    "PRIMARY KEY (id)" \
                    ");"
         self.cursor.execute(newtable)
