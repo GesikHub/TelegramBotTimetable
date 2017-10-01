@@ -11,6 +11,7 @@ class SQLStudents():
 		    		host=db_info.get('HOST'),
 		    		port=db_info.get('PORT'))
         self.cursor = self.conection.cursor()
+	self.create_newtable()
 
     def insert_students(self, student):
         insert = 'INSERT INTO students (id, first_name, second_name, gruop_number) VALUES (?, ?, ?, ?)'
@@ -24,8 +25,9 @@ class SQLStudents():
                    "second_name VARCHAR," \
                    "gruop_number VARCHAR," \
                    "PRIMARY KEY (id)" \
-                   ")"
+                   ");"
         self.cursor.execute(newtable)
+	self.conection.commit()
 
     def select_all(self):
         self.cursor.execute('SELECT * FROM students')
