@@ -14,10 +14,6 @@ server = Flask(__name__)
 check_message = False
 admin_mesage = ''
 
-<<<<<<< HEAD
-=======
-
->>>>>>> server1.2.4
 try:
     @bot.message_handler(commands=['start'])
     def start_message(message):
