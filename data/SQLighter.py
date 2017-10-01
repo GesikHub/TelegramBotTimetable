@@ -26,7 +26,6 @@ class SQLStudents():
                    "PRIMARY KEY (id)" \
                    ");"
         self.cursor.execute(newtable)
-	self.conection.commit()
 
     def select_all(self):
         self.cursor.execute('SELECT * FROM students')
