@@ -15,6 +15,9 @@ check_message = False
 admin_mesage = ''
 students = []
 
+db_worker = SQLStudents(database_name)
+db_worker.create_newtable()
+
 try:
     @bot.message_handler(commands=['start'])
     def start_message(message):
