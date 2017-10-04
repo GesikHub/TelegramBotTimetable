@@ -13,16 +13,16 @@ class SQLStudents():
         self.cursor = self.conection.cursor()
 
     def insert_students(self, student):
-        insert = 'INSERT INTO students (id, first_name, second_name, gruop_number) VALUES (?, ?, ?, ?)'
+        insert = 'INSERT INTO students (id, first_name, second_name, gruop_number) VALUES (%s, %s, %s, %s);'
         self.cursor.execute(insert, (int(student.id), student.name, student.surname, student.number))
         self.conection.commit()
 
     def create_newtable(self):
         newtable = "CREATE TABLE students (" \
                    "id INTEGER, " \
-                   "first_name VARCHAR, " \
-                   "second_name VARCHAR, " \
-                   "gruop_number VARCHAR, " \
+                   "first_name TEXT, " \
+                   "second_name TEXT, " \
+                   "gruop_number TEXT, " \
                    "PRIMARY KEY (id)" \
                    ");"
         self.cursor.execute(newtable)
