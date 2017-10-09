@@ -188,6 +188,7 @@ try:
         db_worker.close()
 
 
+    @bot.message_handler(commands=['timeexams'])
     @bot.message_handler(regexp='Время до сессии')
     def time_to_session(message):
         difference_time = timedelta(hours=0)
