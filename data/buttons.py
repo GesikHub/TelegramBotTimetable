@@ -16,9 +16,11 @@ def button_days():
     itembtnWednesday = types.KeyboardButton('Среда')
     itembtnThursday = types.KeyboardButton('Четверг')
     itembtnFriday = types.KeyboardButton('Пятница')
+    itembtnTimeToSession = types.KeyboardButton('Время до сессии')
     markup.row(itembtnMonday, itembtnTuesday)
     markup.row(itembtnWednesday, itembtnThursday)
     markup.row(itembtnFriday)
+    markup.row(itembtnTimeToSession)
     return markup
 
 def button_admin():
@@ -30,11 +32,13 @@ def button_admin():
     itembtnFriday = types.KeyboardButton('Пятница')
     itembtnSendMessageAll = types.KeyboardButton('Отправить сообщение всем пользователям')
     itembtnActivUsers = types.KeyboardButton('Подписчики')
+    itembtnTimeToSession = types.KeyboardButton('Время до сессии')
     markup.row(itembtnMonday, itembtnTuesday)
     markup.row(itembtnWednesday, itembtnThursday)
     markup.row(itembtnFriday)
     markup.row(itembtnSendMessageAll)
     markup.row(itembtnActivUsers)
+    markup.row(itembtnTimeToSession)
     return markup
 
 def button_admin_message():

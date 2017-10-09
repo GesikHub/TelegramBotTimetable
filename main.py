@@ -2,6 +2,7 @@ import telebot
 import data.buttons
 import myString
 import os
+from datetime import datetime, timedelta
 from flask import Flask, request
 from config import TOKEN
 from config import database_name
@@ -13,6 +14,7 @@ bot = telebot.TeleBot(TOKEN);
 server = Flask(__name__)
 check_message = False
 admin_mesage = ''
+session = datetime(2018, 1, 5, 8, 30, 0, 0)
 
 
 try:
@@ -185,6 +187,18 @@ try:
         bot.send_message(message.chat.id, db_worker.counts_row())
         db_worker.close()
 
+
+    @bot.message_handler(regexp='Время до сессии')
+    def time_to_session(message):
+        difference_time = timedelta(hours=0)
+        new_time = session - (datetime.now() + difference_time)
+        str_time = list(str(new_time).split())
+        for_student = str(new_time.days) + " дней " + str_time[2].split(':')[0] + " часов " \
+                      + str_time[2].split(':')[1] + " минут " + \
+                      str_time[2].split(':')[2].split('.')[0] + " секунд"
+        bot.send_message(message.chat.id, for_student)
+
+
     @bot.message_handler(content_types=['text'])
     def set_message(message):
         global check_message
@@ -196,6 +210,7 @@ try:
             check_message = False
         else:
             bot.send_message(message.chat.id, 'Я тебя не понимаю')
+
 
     def add_student(chat_id):
         markup = data.buttons.button_add_student()
@@ -214,7 +229,7 @@ try:
         bot.set_webhook(url="https://bottimetable.herokuapp.com/439253618:AAEC3C29rePF6ZdREKJfOv32zw3T_TjJPhg")
         return "!", 200
 
-    server.run(host="0.0.0.0", port=os.environ.get('PORT', 5000))
+    server.run(host="0.0.0.0", port=os.environ.get('PORT', 5001))
 
 except:
     bot.send_message(admin[1], "Я упал, помоги мне")

@@ -6,7 +6,7 @@ class User():
         self.id = message.chat.id
         self.name = message.chat.first_name
         self.surname = message.chat.last_name
-        self.number = 0
+        self.number = ""
     def student(self, id, name, surname, number):
         self.id = id
         self.name = name
