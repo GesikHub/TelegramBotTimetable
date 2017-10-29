@@ -185,6 +185,9 @@ try:
     def counter_users(message):
         db_worker = SQLStudents(database_name)
         bot.send_message(message.chat.id, db_worker.counts_row())
+        students = db_worker.select_all()
+        for student in students:
+            bot.send_message(message.chat.id, str(student[0]) + " " + str(student[1]) + " " + str(student[2]) + " " + str(student[3]))
         db_worker.close()
 
 
