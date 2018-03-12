@@ -14,7 +14,7 @@ bot = telebot.TeleBot(TOKEN);
 server = Flask(__name__)
 check_message = False
 admin_mesage = ''
-session = datetime(2018, 1, 5, 8, 30, 0, 0)
+session = datetime(2018, 6, 1, 8, 30, 0, 0)
 
 
 try:
